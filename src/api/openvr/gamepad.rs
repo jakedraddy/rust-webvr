@@ -68,8 +68,20 @@ impl VRGamepad for OpenVRGamepad {
 
         // TODO: check spec order
         let buttons = [
+            button_mask(EVRButtonId_k_EButton_System),
+            button_mask(EVRButtonId_k_EButton_ApplicationMenu),
             button_mask(EVRButtonId_k_EButton_Grip),
-            button_mask(EVRButtonId_k_EButton_ApplicationMenu) 
+            button_mask(EVRButtonId_k_EButton_DPad_Left),
+            button_mask(EVRButtonId_k_EButton_DPad_Up),
+            button_mask(EVRButtonId_k_EButton_DPad_Right),
+            button_mask(EVRButtonId_k_EButton_DPad_Down),
+            button_mask(EVRButtonId_k_EButton_A),
+            button_mask(EVRButtonId_k_EButton_ProximitySensor),
+            button_mask(EVRButtonId_k_EButton_Axis0),
+            button_mask(EVRButtonId_k_EButton_Axis1),
+            button_mask(EVRButtonId_k_EButton_Axis2),
+            button_mask(EVRButtonId_k_EButton_Axis3),
+            button_mask(EVRButtonId_k_EButton_Axis4)
         ];
 
         for mask in buttons.iter() {
